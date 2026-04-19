@@ -1,0 +1,73 @@
+/* Contenedor principal con un fondo gris suave para resaltar las tarjetas blancas */
+.main-content {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    min-height: 500px;
+    background-color: #f4f7f6; /* Fondo para que los cards "floten" */
+}
+
+/* Sidebar con estilo de tarjeta */
+.filters {
+    width: 250px;
+    min-width: 200px;
+    flex-shrink: 0;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Profundidad */
+}
+
+.collections {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Corrección de tu selector: .filter-category */
+.filter-category {
+    margin-bottom: 20px;
+}
+
+.filter-category h3 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Alineación profesional de los checkboxes */
+.filter-category label {
+    display: flex; /* Flex para alinear checkbox y texto */
+    align-items: center;
+    gap: 10px; 
+    cursor: pointer;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+.filter-category label:hover {
+    color: #007bff; /* Feedback al pasar el mouse */
+}
+
+/* Estilo moderno para el checkbox */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #007bff; /* Color moderno para el checkbox marcado */
+}
+
+.filter-category span {
+    font-size: 14px;
+    color: #555;
+}
+.label1{
+    padding-right: 6px;
+}
