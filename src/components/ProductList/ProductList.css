@@ -1,14 +1,13 @@
-/* Contenedor principal con un fondo gris suave para resaltar las tarjetas blancas */
 .main-content {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
     padding: 2rem;
     min-height: 500px;
-    background-color: #f4f7f6; /* Fondo para que los cards "floten" */
+    background-color: #f4f7f6; 
 }
 
-/* Sidebar con estilo de tarjeta */
+
 .filters {
     width: 250px;
     min-width: 200px;
@@ -16,7 +15,7 @@
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Profundidad */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
 }
 
 .collections {
@@ -28,7 +27,6 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Corrección de tu selector: .filter-category */
 .filter-category {
     margin-bottom: 20px;
 }
@@ -42,9 +40,9 @@
     padding-bottom: 5px;
 }
 
-/* Alineación profesional de los checkboxes */
+
 .filter-category label {
-    display: flex; /* Flex para alinear checkbox y texto */
+    display: flex; 
     align-items: center;
     gap: 10px; 
     cursor: pointer;
@@ -53,21 +51,140 @@
 }
 
 .filter-category label:hover {
-    color: #007bff; /* Feedback al pasar el mouse */
+    color: #007bff; 
 }
 
-/* Estilo moderno para el checkbox */
+
 input[type="checkbox"] {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    accent-color: #007bff; /* Color moderno para el checkbox marcado */
+    accent-color: #007bff; 
 }
 
 .filter-category span {
     font-size: 14px;
     color: #555;
 }
-.label1{
-    padding-right: 6px;
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
 }
+
+ .product-card {
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+   
+ }
+
+ .product-image {
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+ }
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+.product-card p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #9893fb;
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* Responsive Design: para las pantallas pequeñas */
+@media (max-width: 1024px){
+    .filters-category {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    .options{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sort-options {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+    .sort-options select {
+        width: 100%;
+    }
+    .products{
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    }
+
+}
+
+/* media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .filters {
+        width: 100%;
+        margin-bottom: 1rem;
+
+    }
+    .filter-category, .filter-type{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-card h3{
+        font-size: 12px;
+    }
+    .product-card p{
+        font-size: 14px;
+    }
+    .products{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .filters {
+        width: 100%;
+    }
+    .filter-category, .filter-type{
+        width: 100%;
+    }
+    .products{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .filter-category h3 {
+        font-size: 10px;
+    }
+    .filter-category label {
+        font-size: 12px;
+    }
+    .product-card h3 {
+        font-size: 11px;
+    }
+    .product-card p {
+        font-size: 13px;
+    }
+}
+
+
